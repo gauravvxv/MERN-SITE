@@ -6,13 +6,13 @@ const validateData = async (req, res, next) => {
         error.push({ message: "Title is required" })
     }
 
-    if (completed===undefined || completed ===null) {
+    if (completed === undefined || completed === null) {
         error.push({ message: "Completed is required" })
 
     }
 
     if (error.length > 0) {
-       return res.status(400).json({ error })
+        return res.status(400).json({ error })
     }
     next();
 }

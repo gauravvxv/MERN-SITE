@@ -50,7 +50,7 @@ const loginpost = async (req,res) => {
        }
 
        if(result){
-        var token = jwt.sign({ userID: user._id }, 'shhhhh');
+        const token = jwt.sign({ userID: user._id }, 'shhhhh');
         res.status(200).json({message: "Login successful" , token: token, userID: user._id})
        }
        else{
